@@ -1,8 +1,6 @@
 package com.example.roomdb
 
-import androidx.room.Dao
-import androidx.room.Insert
-import androidx.room.Query
+import androidx.room.*
 
 @Dao
 interface Emp_DAO {
@@ -11,4 +9,10 @@ interface Emp_DAO {
 
     @Query("select * from Emp_Entity")
     fun readEmp(): List<Emp_Entity>
+
+    @Delete
+   fun delData(emp: Emp_Entity)
+
+    @Update
+    fun update(emp: Emp_Entity)
 }
