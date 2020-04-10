@@ -36,10 +36,20 @@ dependencies {
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.1.1'
 
     //ROOM
+    // Material components
+    implementation 'com.google.android.material:material:1.0.0-beta01'
 
-    def room_version = "2.2.5"
+    // Room database
+    def room_version = "2.0.0-beta01"
     implementation "androidx.room:room-runtime:$room_version"
-    kapt "androidx.room:room-compiler:$room_version"
+    annotationProcessor "androidx.room:room-compiler:$room_version"
+    kapt 'androidx.room:room-compiler:2.0.0-beta01'
+
+    // Android KTX
+    implementation 'androidx.core:core-ktx:1.0.0-beta01'
+
+    // Anko Commons
+    implementation "org.jetbrains.anko:anko-commons:0.10.5"
 
 
 
